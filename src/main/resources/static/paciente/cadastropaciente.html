@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>PsicoLink - Área do Paciente</title>
+    <link rel="stylesheet" href="../css/style.css">
+	
+	<script src="../js/script.js" defer></script>
+	
+</head>
+<body>
+	
+	<nav class="navbar">
+	    <a href="index.html" class="nav-logo">PsicoLink</a>
+	    <div class="nav-links">
+	        <button class="btn-logout" onclick="window.location.href='index.html'">Sair</button>
+	    </div>
+	</nav>
+
+	<div class="dashboard-container">
+	    <header class="dashboard-header">
+	        <h1>Painel do Paciente</h1>
+	        <p>Gerencie suas informações e acompanhe seu tratamento.</p>
+	    </header>
+
+	    <div class="dashboard-grid">
+	        <section class="db-card">
+	            <div class="card-header">
+	                <span class="icon">📝</span>
+	                <h3>Completar Cadastro</h3>
+	            </div>
+	            <div class="form-container">
+	                <div class="input-group">
+	                    <label>Nome Completo</label>
+	                    <input type="text" id="nome" placeholder="Digite seu nome">
+	                </div>
+	                <div class="input-group">
+	                    <label>E-mail Principal</label>
+	                    <input type="email" id="email" placeholder="exemplo@email.com">
+	                </div>
+	                <button class="btn-primary" onclick="cadastrar()">Salvar Informações</button>
+	            </div>
+	        </section>
+
+	        <section class="db-card info-card">
+	            <div class="card-header">
+	                <span class="icon">👤</span>
+	                <h3>Seus Dados</h3>
+	            </div>
+	            <div class="info-content">
+	                <div class="info-item">
+	                    <small>Nome</small>
+	                    <p id="display-nome">Não informado</p>
+	                </div>
+	                <div class="info-item">
+	                    <small>E-mail</small>
+	                    <p id="display-email">Não informado</p>
+	                </div>
+	            </div>
+	        </section>
+	    </div>
+	</div>
+
+    <script src="script.js"></script>
+    <script>
+        // Garante que a lista de pacientes carregue aqui
+        window.onload = carregarListaPacientes;
+    </script>
+</body>
+</html>

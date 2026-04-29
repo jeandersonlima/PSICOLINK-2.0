@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>PsicoLink - Bem-vindo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<!--Div com o navbar-->
+	<nav class="navbar">
+	    <a href="index.html" class="nav-logo">PsicoLink</a>
+	    <div class="nav-links">
+	        <button onclick="window.location.href='index.html'">Sair / Início</button>
+	    </div>
+	</nav>
+	
+	<!--Div com o nome principal do site-->
+	<div class="portal-container">
+		<h1>PsicoLink</h1>
+		 <p class="instrucao">Selecione o seu perfil de acesso para continuar</p>
+	    
+		 <!--Div com os cards que ficam dentro da div com o nome principal em 
+			que tem os cards de cada tipo de usuário no sistema-->
+	    <div class="cards-container">
+	        <div class="card card-psicologo" onclick="irPara('psicologo')">
+	            <h2>Psicólogo</h2>
+	            <p>Área clínica e prontuários</p>
+	        </div>
+
+	        <div class="card card-paciente" onclick="irPara('paciente')">
+	            <h2>Paciente</h2>
+	            <p>Meu diário e consultas</p>
+	        </div>
+
+	        <div class="card card-empresa" onclick="irPara('empresa')">
+	            <h2>Empresa</h2>
+	            <p>Gestão administrativa</p>
+	        </div>
+	    </div>
+	</div>
+	<script>
+	    function irPara(perfil) {
+	        if (perfil === 'psicologo') {
+	            // Entra na pasta psicologo e busca o arquivo cadastropsicologo.html
+	            window.location.href = "psicologo/cadastropsicologo.html"; 
+	        } else if (perfil === 'paciente') {
+	            // Entra na pasta paciente e busca o arquivo cadastro.html
+	            window.location.href = "paciente/cadastropaciente.html";
+	        } else if (perfil === 'empresa') {
+	            // Entra na pasta empresa (caso você já tenha criado o cadastro.html lá)
+	            window.location.href = "empresa/cadastroempresa.html";
+	        }
+	    }
+	</script>
+</body>
+</html>
